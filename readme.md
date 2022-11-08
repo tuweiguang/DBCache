@@ -60,3 +60,9 @@ PASS
 1. 强依赖`gorm.DB`,`redis.Client`和`zap.Logger`,能否抽象出来.
 2. 引入延时队列,对删除cache失败进行尝试延时删除.
 3. 添加cache随机ttl,防止缓存雪崩.
+
+
+
+# Reference
+
+[go-zero](https://github.com/zeromicro/go-zero)
