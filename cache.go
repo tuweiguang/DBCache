@@ -225,6 +225,9 @@ func (c *DBCache) take(v interface{}, key string, query func(v interface{}) erro
 		return nil
 	}
 
+	//hit RAM
+	atomic.AddUint64(&c.statTotal, 1)
+	atomic.AddUint64(&c.statHit, 1)
 	return json.Unmarshal(val.([]byte), v)
 }
 
